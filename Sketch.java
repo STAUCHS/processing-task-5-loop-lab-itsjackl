@@ -55,17 +55,15 @@ public class Sketch extends PApplet {
     rect(900, 0, 300, 300);
   }
   
-  /**
-   * Draws the bottom left section
-   */
+  // Section 1
   public void draw_section1() {
     int intX = 0;
     int intY = 0;
 
     for (int intRow = 0; intRow < 30; intRow++) {
       for (int intColumn = 0; intColumn < 30; intColumn++) {
-        intX = 3 + intRow * 10;  // Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + intColumn * 10; // Instead of zero, calculate the proper intY location using 'intColumn'
+        intX = 3 + intRow * 10;
+        intY = 300 + 3 + intColumn * 10;
 
         fill(255);
         noStroke();
@@ -74,74 +72,100 @@ public class Sketch extends PApplet {
     }
   }
 
-  /**
-   * Use the modulus operator and an if statement to select the color
-   * Don't loop from 30 to 60 to shift everything over, just add 300 to x.
-   */
+  // Section 2
   public void draw_section2() {
+    // Declare variables
     int intX = 0;
     int intY = 0;
+    
+    // Nested loops
     for (int intRow = 0; intRow < 30; intRow++) {
       for (int intColumn = 0; intColumn < 30; intColumn++) {
-        intX = 300 + 3 + intRow * 10;  // Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + intColumn * 10; // Instead of zero, calculate the proper intY location using 'intColumn'
-
-        fill(255 * ((intRow + 1) % 2));
+        intX = 300 + 3 + intRow * 10;
+        intY = 300 + 3 + intColumn * 10;
+        
+        // If/else statement to alternate colours
+        if ((intRow % 2) == 1){
+          fill(0);  
+        }
+        else{
+          fill(255);
+        }
+        
+        // Print rectangles
         noStroke();
         rect(intX, intY, 5, 5);
       }
   }
 }
 
-  /**
-   * Use the modulus operator and an if/else statement to select the color.
-   * Don't use multiple 'if' statements.
-   */
+  // Section 3
   public void draw_section3() {
+    // Declare variables
     int intX = 0;
     int intY = 0;
+
+    // Nested loops
     for (int intRow = 0; intRow < 30; intRow++) {
       for (int intColumn = 0; intColumn < 30; intColumn++) {
-        intX = 600 + 3 + intRow * 10;  // Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + intColumn * 10; // Instead of zero, calculate the proper intY location using 'intColumn'
+        intX = 600 + 3 + intRow * 10;
+        intY = 300 + 3 + intColumn * 10;
 
-        fill(255 * (intColumn % 2));
+        // If/else statement to alternate colours
+        if((intColumn % 2) == 0){
+          fill(0);
+        }
+        else{
+          fill(255);
+        }
+        
+        // Print rectangles
         noStroke();
         rect(intX, intY, 5, 5);
       }
   }
 }
 
-  /**
-   * Use the modulus operator and just one 'if' statement to select the color.
-   */
+  // Section 4
   public void draw_section4() {
+    // Declare variables
     int intX = 0;
     int intY = 0;
+
+    // Nested loops
     for (int intRow = 0; intRow < 30; intRow++) {
       for (int intColumn = 0; intColumn < 30; intColumn++) {
-        intX = 900 + 3 + intRow * 10;  // Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + intColumn * 10; // Instead of zero, calculate the proper intY location using 'intColumn'
+        intX = 900 + 3 + intRow * 10;
+        intY = 300 + 3 + intColumn * 10;
 
-        fill(255 * (intColumn % 2) * ((intRow + 1) % 2));
+        // If/else statement to alternate colours
+        if((intColumn % 2) * ((intRow + 1) % 2) == 0){
+          fill(0);
+        }
+        else{
+          fill(255);
+        }
+        
+        // Print rectangles
         noStroke();
         rect(intX, intY, 5, 5);
       }
   }
 }
 
-  /**
-   * Do NOT use 'if' statements to complete 5-8. Manipulate the loops instead
-   */
+  // Section 5
   public void draw_section5() {
+    // Declare variables
     int intX = 0;
     int intY = 0;
 
+    // Nested loops
     for (int intRow = 0; intRow < 30; intRow++) {
       for (int intColumn = 30; intColumn + intRow > 29; intColumn--) {
-        intX = 3 + intRow * 10;  // Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 3 + intColumn * 10; // Instead of zero, calculate the proper intY location using 'intColumn'
+        intX = 3 + intRow * 10;
+        intY = 3 + intColumn * 10;
 
+        // Print rectangles
         fill(255);
         noStroke();
         rect(intX, intY, 5, 5);
@@ -149,16 +173,19 @@ public class Sketch extends PApplet {
     }
   }
 
+  // Section 6
   public void draw_section6() {
+    // Declare variables
     int intX = 0;
     int intY = 0;
 
+    // Nested loops
     for (int intColumn = 0; intColumn < 30; intColumn++) {
       for (int intRow = 0; intRow <= intColumn; intRow++) {
-      
-        intX = 300 + 3 + intRow * 10;  // Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 3 + intColumn * 10; // Instead of zero, calculate the proper intY location using 'intColumn'
+        intX = 300 + 3 + intRow * 10;
+        intY = 3 + intColumn * 10;
 
+        // Print rectangles
         fill(255);
         noStroke();
         rect(intX, intY, 5, 5);
@@ -166,15 +193,19 @@ public class Sketch extends PApplet {
     }
   }
 
+  // Section 7
   public void draw_section7() {
+    // Declare variables
     int intX = 0;
     int intY = 0;
 
+    // Nested loops
     for (int intRow = 0; intRow < 30; intRow++) {
       for (int intColumn = 0; intRow + intColumn < 30; intColumn++) {
-        intX = 600+ 3 + intRow * 10;  // Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 3 + intColumn * 10; // Instead of zero, calculate the proper intY location using 'intColumn'
+        intX = 600+ 3 + intRow * 10;
+        intY = 3 + intColumn * 10;
 
+        // Print rectangles
         fill(255);
         noStroke();
         rect(intX, intY, 5, 5);
@@ -182,15 +213,19 @@ public class Sketch extends PApplet {
     }
   }
   
+  // Section 8
   public void draw_section8() {
+    // Declare variables
     int intX = 0;
     int intY = 0;
 
+    // Nested loops
     for (int intRow = 0; intRow < 30; intRow++) {
       for (int intColumn = 0; intColumn <= intRow; intColumn++) {
-        intX = 900 + 3 + intRow * 10;  // Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 3 + intColumn * 10; // Instead of zero, calculate the proper intY location using 'intColumn'
+        intX = 900 + 3 + intRow * 10;
+        intY = 3 + intColumn * 10;
 
+        // Print rectangles
         fill(255);
         noStroke();
         rect(intX, intY, 5, 5);
