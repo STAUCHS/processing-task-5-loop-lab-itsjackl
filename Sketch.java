@@ -57,14 +57,17 @@ public class Sketch extends PApplet {
   
   // Section 1
   public void draw_section1() {
+    // Declare variables
     int intX = 0;
     int intY = 0;
 
+    // Nested loops
     for (int intRow = 0; intRow < 30; intRow++) {
       for (int intColumn = 0; intColumn < 30; intColumn++) {
         intX = 3 + intRow * 10;
         intY = 300 + 3 + intColumn * 10;
 
+        // Print rectangles
         fill(255);
         noStroke();
         rect(intX, intY, 5, 5);
